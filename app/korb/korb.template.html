@@ -1,0 +1,18 @@
+<div>
+  <h1> THIS IS KORBBBB</h1>
+  <div ></div>
+  <div ng-if="lKorbCtrl.see">Корзина пустая</div>
+  <ul>
+    <li
+        ng-if="!lKorbCtrl.see"
+        ng-repeat="korb in lKorbCtrl.korbs">
+      <p>код модели : {{ korb.id}}</p>
+
+      <p>название модели : {{ korb.name}}</p>
+      <p>описание : {{ korb.description}}</p>
+      <p>количество товара : {{ korb.quantity}}</p>
+      <p>сума товара : {{ korb.sum}}</p>
+      <a href="#/" ng-click="lKorbCtrl.remove(korb.id)">del</a>
+    </li>
+  </ul>
+</div>

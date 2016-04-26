@@ -1,0 +1,36 @@
+<div class="container">
+  <h3>3д-модели</h3>
+
+  <div class="search">
+    <input type="text"
+           ng-model="query">
+    от <input type="text"
+              ng-model="ot"/>
+    до <input type="text"
+              ng-model="do"/>
+
+  </div>
+  <div class="list_item_wrapper">
+    <div class="item"
+         ng-repeat="item in lCtrl.shopItems | filter: {title : query} | filter: lCtrl.andFromFilter(ot,do) ">
+
+      <h4>{{item.title}}</h4>
+
+      <p class="id_item">id : {{item.id}}</p>
+
+      <p class="description">describer: {{item.description}}</p>
+
+      <p class="polygons">polygons:{{item.polygons}}</p>
+
+      <p class="type">type:{{item.type}}</p>
+
+      <p class="cost">cost:{{item.cost}}</p>
+
+      <input type="text" ng-model="quantity_item"/>
+
+      <a href="#/" ng-click="lCtrl.add(item.id, quantity_item)">buy</a>
+
+    </div>
+  </div>
+
+</div>

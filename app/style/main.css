@@ -1,0 +1,12 @@
+input{
+  border-radius: 4px;
+}
+
+.list_item_wrapper .item{
+  border: 1px dashed #d3d3d3;
+}
+.korb_quantity{
+  color: #1826a8;
+  font-size: 18px;
+  font-weight: 600;
+}

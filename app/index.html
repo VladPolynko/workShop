@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shop">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<nav></nav>
+
+<ng-view></ng-view>
+
+<!--include-->
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/lodash/lodash.js"></script>
+
+<!--Module-->
+<script src="app.js"></script>
+<script src="route.js"></script>
+<script src="shop/shop.module.js"></script>
+
+<!--Service-->
+<script src="shop/shop.service.js"></script>
+<script src="korb/korb.storage.service.js"></script>
+
+<!-- Directive-->
+<script src="shop/show.directive.js"></script>
+<script src="korb/korb.directive.js"></script>
+<script src="nav/nav.directive.js"></script>
+
+<!--Controller-->
+<script src="shop/shop.controller.js"></script>
+<script src="korb/korb.controller.js"></script>
+<script src="nav/nav.controller.js"></script>
+
+</body>
+</html>
