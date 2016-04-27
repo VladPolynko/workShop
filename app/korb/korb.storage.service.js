@@ -9,6 +9,8 @@
 
   function korbStorage(shopUtils) {
     var _korb = [];
+
+    //???? _korb.length ????
     var korbQuantity = 0;
     var korbItem = function (id, quantity) {
       return {
@@ -22,8 +24,14 @@
 
     var service = {
       addKorbItem: addKorbItem,
+
+      //??? ??? ???? ????????????
       getKorb: getKorb,
       korb: _korb,
+
+      //????? ????????
+      //korb: _korb,
+
       korbQuantitysAdd: korbQuantityAdd,
       korbQuantityGet: korbQuantityGets,
       removeKorbItem: removeKorbItem
@@ -44,6 +52,7 @@
           break;
         }
       }
+      //??? ???????
       //return ;
     }
 

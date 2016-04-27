@@ -2,6 +2,7 @@
 
   'use strict';
 
+  //???? ?????? shop??
   angular.module('shop').directive('someShop', someShop);
 
   someShop.$inject = [];
