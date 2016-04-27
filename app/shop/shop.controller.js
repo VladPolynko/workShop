@@ -3,11 +3,12 @@ angular
         .controller('listCtrl', listCtrl);
 
 listCtrl.$inject = [
+    '$scope',
     'shopUtils',
     'korbStorage'
 ];
 
-function listCtrl(shopData, korbStorage) {
+function listCtrl($scope,shopData, korbStorage) {
     var self = this;
     self.shopItems = shopData.shopItems;
 
@@ -27,10 +28,7 @@ function listCtrl(shopData, korbStorage) {
         korbStorage.addKorbItem(id, quantity);
         self.latestKorbs = korbStorage.getKorb();
 
+        $scope.$emit('changeKorb');
     };
-
-
-
-
 }
 

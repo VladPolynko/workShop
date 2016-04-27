@@ -6,13 +6,20 @@
             .controller('indexController', indexController);
 
     indexController.$inject = [
+        '$scope',
         'korbStorage'
     ];
 
-    function indexController(korbStorage) {
+    function indexController($scope,
+                             korbStorage) {
         var self = this;
         self.quantity = korbStorage.korbQuantityGet();
-        console.log(self.quantity);
 
+        $scope.$on('changeKorb', function () {
+            self.quantity = korbStorage.korbQuantityGet();
+        });
+
+
+        console.log(self.quantity);
     }
 })();
