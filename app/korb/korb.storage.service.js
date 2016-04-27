@@ -40,7 +40,7 @@
       for(var i in _korb ){
         if(id === _korb[i].id){
           console.log(_korb[i]);
-          delete _korb[i];
+          _korb.splice(i, 1);
           break;
         }
       }

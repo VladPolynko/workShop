@@ -12,13 +12,20 @@
     function KorbCtrl(korbStorage) {
         var self = this;
         self.see = false;
-        self.korbs = korbStorage.korb;
 
-        if (self.korbs.length == 0) {
-            self.see = true
+        getKorb();
+        function getKorb() {
+            self.korbs = korbStorage.getKorb();
+
+            if (self.korbs.length == 0) {
+                self.see = true
+            }
         }
+
         self.remove = function (id) {
             korbStorage.removeKorbItem(id);
+
+            getKorb();
         };
 
     }
